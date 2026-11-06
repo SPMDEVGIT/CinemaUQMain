@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      styleClass="contenido" spacing="12"
+      fx:controller="co.edu.uniquindio.cinemauq.controladores.DisponibilidadControlador">
+    <Label text="Disponibilidad de una función" styleClass="titulo-seccion"/>
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Función" styleClass="etiqueta"/>
+        <ComboBox fx:id="cmbFunciones" prefWidth="560" promptText="Selecciona una función"/>
+    </HBox>
+    <HBox spacing="32" alignment="CENTER_LEFT">
+        <Label fx:id="lblTotal" styleClass="dato-destacado"/>
+        <Label fx:id="lblDisponibles" styleClass="dato-destacado"/>
+        <Label fx:id="lblOcupados" styleClass="dato-destacado"/>
+    </HBox>
+    <ScrollPane fx:id="scrollMapa" fitToWidth="true" VBox.vgrow="ALWAYS" styleClass="panel-mapa"/>
+</VBox>

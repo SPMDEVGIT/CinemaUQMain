@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      styleClass="contenido" spacing="12"
+      fx:controller="co.edu.uniquindio.cinemauq.controladores.CancelarVentaControlador">
+    <Label text="Cancelar venta" styleClass="titulo-seccion"/>
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Filtrar por código" styleClass="etiqueta"/>
+        <TextField fx:id="txtFiltro" promptText="Ej. V001" prefWidth="200"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button text="Cancelar venta seleccionada" onAction="#cancelarVenta" styleClass="boton-primario"/>
+    </HBox>
+    <TableView fx:id="tabla" VBox.vgrow="ALWAYS">
+        <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+        </columnResizePolicy>
+        <columns>
+            <TableColumn fx:id="colCodigo" text="Código"/>
+            <TableColumn fx:id="colFuncion" text="Función"/>
+            <TableColumn fx:id="colPelicula" text="Película"/>
+            <TableColumn fx:id="colCliente" text="Cliente"/>
+            <TableColumn fx:id="colAsiento" text="Asiento"/>
+            <TableColumn fx:id="colValor" text="Valor pagado"/>
+            <TableColumn fx:id="colFechaHora" text="Fecha y hora"/>
+            <TableColumn fx:id="colEstado" text="Estado"/>
+        </columns>
+    </TableView>
+</VBox>

@@ -1,0 +1,251 @@
+/* Paleta: azul oscuro (encabezado), azul de acento, grises claros de fondo */
+.root {
+    -color-fondo: #f4f6fa;
+    -color-oscuro: #1f2a44;
+    -color-acento: #2f6fed;
+    -color-acento-hover: #2559c4;
+    -color-texto: #1d2433;
+    -color-texto-suave: #6b7488;
+    -color-borde: #d5dae5;
+    -color-disponible: #2e9e5b;
+    -color-ocupado: #d64545;
+    -color-seleccionado: #2f6fed;
+
+    -fx-font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-color: -color-fondo;
+    -fx-text-fill: -color-texto;
+}
+
+.label {
+    -fx-text-fill: -color-texto;
+}
+
+/* ---------- Login ---------- */
+.fondo-login {
+    -fx-background-color: linear-gradient(to bottom right, #1f2a44, #34508f);
+    -fx-padding: 32;
+}
+
+.tarjeta {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-padding: 32;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 24, 0, 0, 6);
+}
+
+.titulo-login {
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-oscuro;
+}
+
+.subtitulo {
+    -fx-text-fill: -color-texto-suave;
+    -fx-padding: 0 0 12 0;
+}
+
+.etiqueta {
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-texto;
+}
+
+.text-field, .password-field {
+    -fx-background-color: white;
+    -fx-border-color: -color-borde;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 8 10 8 10;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: -color-acento;
+}
+
+/* ---------- Botones ---------- */
+.boton-primario {
+    -fx-background-color: -color-acento;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-padding: 9 18 9 18;
+    -fx-cursor: hand;
+}
+
+.boton-primario:hover {
+    -fx-background-color: -color-acento-hover;
+}
+
+.boton-secundario {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-border-color: rgba(255, 255, 255, 0.6);
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 7 16 7 16;
+    -fx-cursor: hand;
+}
+
+.boton-secundario:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* ---------- Pantalla principal ---------- */
+.encabezado {
+    -fx-background-color: -color-oscuro;
+    -fx-padding: 12 20 12 20;
+}
+
+.titulo-app {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.usuario-encabezado {
+    -fx-text-fill: white;
+}
+
+.tab-pane > .tab-header-area > .headers-region > .tab {
+    -fx-padding: 6 14 6 14;
+}
+
+/* ---------- Contenido de las pestañas ---------- */
+.contenido {
+    -fx-padding: 20;
+}
+
+.titulo-seccion {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-oscuro;
+}
+
+.subtitulo-seccion {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-oscuro;
+    -fx-padding: 8 0 0 0;
+}
+
+.ayuda {
+    -fx-text-fill: -color-texto-suave;
+    -fx-font-size: 13px;
+}
+
+.boton-neutro {
+    -fx-background-color: white;
+    -fx-text-fill: -color-oscuro;
+    -fx-border-color: -color-borde;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 9 18 9 18;
+    -fx-cursor: hand;
+}
+
+.boton-neutro:hover {
+    -fx-background-color: #e9edf5;
+}
+
+.boton-peligro {
+    -fx-background-color: -color-ocupado;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-padding: 9 18 9 18;
+    -fx-cursor: hand;
+}
+
+.boton-peligro:hover {
+    -fx-background-color: #b83a3a;
+}
+
+.tarjeta-reporte {
+    -fx-background-color: white;
+    -fx-border-color: -color-borde;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 14 18 14 18;
+}
+
+.cifra {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-oscuro;
+}
+
+.progress-bar > .bar {
+    -fx-background-color: -color-acento;
+    -fx-background-radius: 4;
+}
+
+.dato-destacado {
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-oscuro;
+}
+
+.valor-pagar {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-acento;
+}
+
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: -color-borde;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+
+.panel-mapa {
+    -fx-background-color: white;
+    -fx-border-color: -color-borde;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 8;
+}
+
+.panel-mapa > .viewport {
+    -fx-background-color: white;
+}
+
+.pantalla {
+    -fx-background-color: -color-oscuro;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-padding: 4;
+    -fx-background-radius: 4;
+}
+
+.leyenda {
+    -fx-text-fill: white;
+    -fx-padding: 3 10 3 10;
+    -fx-background-radius: 4;
+    -fx-font-size: 12px;
+}
+
+/* ---------- Mapa de asientos ---------- */
+.asiento {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-min-width: 48;
+    -fx-min-height: 36;
+}
+
+.asiento:disabled {
+    -fx-opacity: 1;
+}
+
+.asiento-disponible {
+    -fx-background-color: -color-disponible;
+}
+
+.asiento-ocupado {
+    -fx-background-color: -color-ocupado;
+    -fx-opacity: 1;
+}
+
+.asiento-seleccionado {
+    -fx-background-color: -color-seleccionado;
+}

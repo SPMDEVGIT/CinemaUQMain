@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      styleClass="contenido" spacing="12"
+      fx:controller="co.edu.uniquindio.cinemauq.controladores.ReportesControlador">
+    <Label text="Reportes" styleClass="titulo-seccion"/>
+    <HBox spacing="16">
+        <VBox styleClass="tarjeta-reporte" spacing="4" HBox.hgrow="ALWAYS" maxWidth="Infinity">
+            <Label text="Total de entradas vendidas" styleClass="ayuda"/>
+            <Label fx:id="lblEntradas" styleClass="cifra"/>
+        </VBox>
+        <VBox styleClass="tarjeta-reporte" spacing="4" HBox.hgrow="ALWAYS" maxWidth="Infinity">
+            <Label text="Total de ingresos" styleClass="ayuda"/>
+            <Label fx:id="lblIngresos" styleClass="cifra"/>
+        </VBox>
+        <VBox styleClass="tarjeta-reporte" spacing="4" HBox.hgrow="ALWAYS" maxWidth="Infinity">
+            <Label text="Película(s) más vendida(s)" styleClass="ayuda"/>
+            <Label fx:id="lblMasVendidas" styleClass="cifra" wrapText="true"/>
+        </VBox>
+    </HBox>
+
+    <Label text="Ocupación de una función" styleClass="subtitulo-seccion"/>
+    <HBox spacing="12" alignment="CENTER_LEFT">
+        <ComboBox fx:id="cmbFunciones" prefWidth="520" promptText="Selecciona una función"/>
+        <Label fx:id="lblDisponibles" styleClass="dato-destacado"/>
+        <Label fx:id="lblOcupados" styleClass="dato-destacado"/>
+        <Label fx:id="lblPorcentaje" styleClass="valor-pagar"/>
+    </HBox>
+    <ProgressBar fx:id="barra" progress="0" maxWidth="Infinity" prefHeight="18"/>
+
+    <Label text="Funciones programadas por fecha" styleClass="subtitulo-seccion"/>
+    <HBox spacing="12" alignment="CENTER_LEFT">
+        <Label text="Fecha" styleClass="etiqueta"/>
+        <DatePicker fx:id="dpFecha" prefWidth="200"/>
+    </HBox>
+    <TableView fx:id="tabla" VBox.vgrow="ALWAYS" prefHeight="180">
+        <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+        </columnResizePolicy>
+        <columns>
+            <TableColumn fx:id="colCodigo" text="Código"/>
+            <TableColumn fx:id="colPelicula" text="Película"/>
+            <TableColumn fx:id="colSala" text="Sala"/>
+            <TableColumn fx:id="colHora" text="Hora"/>
+            <TableColumn fx:id="colValor" text="Valor base"/>
+            <TableColumn fx:id="colDisponibles" text="Asientos disponibles"/>
+        </columns>
+    </TableView>
+</VBox>
